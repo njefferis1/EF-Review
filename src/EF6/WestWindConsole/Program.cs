@@ -48,6 +48,31 @@ namespace WestWindConsole
                     case 8:
                         DisplayShippers();
                         break;
+                    case 9:
+                        DisplayRegions();
+                        break;
+                    case 10:
+                        DisplayTerritories();
+                        break;
+                    case 11:
+                        DisplayPaymentTypes();
+                        break;
+                    case 12:
+                        DisplayPayments();
+                        break;
+                    case 13:
+                        DisplayManifestItems();
+                        break;
+                    case 14:
+                        DisplayOrders();
+                        break;
+                    case 15:
+                        DisplayCustomers();
+                        break;
+                    case 16:
+                        DisplayAddresses();
+                        break;
+
                     // TODO: Practice - Display methods for remaining tables
                 }
                 Pause();
@@ -59,6 +84,86 @@ namespace WestWindConsole
             Console.WriteLine("-- Press [Enter] to continue --");
             Console.ReadLine();
             Console.Clear();
+        }
+
+        private void DisplayRegions()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Regions.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayTerritories()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Territories.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayPaymentTypes()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.PaymentTypes.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayPayments()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Payments.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayManifestItems()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.ManifestItems.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayOrders()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Orders.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayCustomers()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Customers.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
+        }
+
+        private void DisplayAddresses()
+        {
+            using (var context = new WestWindContext())
+            {
+                int count = context.Addresses.Count();
+                // $ - String Interpolation
+                Console.WriteLine($"There are {count} Regions");
+            }
         }
 
         private void DisplayShippers()
@@ -158,6 +263,14 @@ namespace WestWindConsole
             Console.WriteLine("6) Employee Territories");
             Console.WriteLine("7) Shipments");
             Console.WriteLine("8) Shippers");
+            Console.WriteLine("9) Regions");
+            Console.WriteLine("10) Territories");
+            Console.WriteLine("11) Payment Types");
+            Console.WriteLine("12) Payments");
+            Console.WriteLine("13) Manifest Items");
+            Console.WriteLine("14) Orders");
+            Console.WriteLine("15) Customers");
+            Console.WriteLine("16) Addresses");
             // TODO: Practice - Menu options for remaining tables
 
             Console.Write("Select a table (or 0 to exit): ");
