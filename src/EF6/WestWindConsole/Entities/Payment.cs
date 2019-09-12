@@ -20,10 +20,10 @@ namespace WestWindConsole.Entities
         [Required]
         public decimal Amount { get; set; }
 
-        [ForeignKey("PaymentType")]
+        
         public int PaymentTypeID { get; set; }
 
-        [ForeignKey("Order")]
+        
         public int OrderID { get; set; }
 
         [Required]

@@ -14,10 +14,10 @@ namespace WestWindConsole.Entities
         [Key]
         public int ManifestItemID { get; set; }
 
-        [ForeignKey("Shipment")]
+       
         public int ShipmentID { get; set; }
 
-        [ForeignKey("Product")]
+       
         public int ProductID { get; set; }
 
         public int ShipQuantity { get; set; }

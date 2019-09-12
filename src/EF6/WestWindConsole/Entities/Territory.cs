@@ -17,7 +17,7 @@ namespace WestWindConsole.Entities
         [Required, StringLength(50, ErrorMessage = "Territory Description cannot be more that 50 characters long")]
         public string TerritoryDescription { get; set; }
 
-        [ForeignKey("Region")]
+        
         public int RegionID { get; set; }
 
         public virtual ICollection<EmployeeTerritory> EmployeeTerritories { get; set; } =

@@ -16,7 +16,7 @@ namespace WestWindConsole.Entities
 
         public int SalesRepID { get; set; }
 
-        [Required, ForeignKey("Customer"), StringLength(5, ErrorMessage = "Customer ID cannot be more than 5 characters long")]
+        [Required, StringLength(5, ErrorMessage = "Customer ID cannot be more than 5 characters long")]
         public string CustomerID { get; set; }
 
         public DateTime OrderDate { get; set; }
